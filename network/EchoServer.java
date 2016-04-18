@@ -3,7 +3,7 @@ import java.io.*;
 
 public class EchoServer {
     int portNum;
-
+    
     public EchoServer(int portNum) {
         this.portNum = portNum;
     }
@@ -15,7 +15,7 @@ public class EchoServer {
             while(true) {
                 Socket serverSocket = echoServer.accept();
 
-                // start a new thread and run the run() method in it 
+                // start a new thread and run the run() method in it
                 (new EchoThread(serverSocket)).start();
             }
         }
